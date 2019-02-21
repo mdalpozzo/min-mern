@@ -1,0 +1,40 @@
+{
+  "name": "min-mern",
+  "version": "1.0.0",
+  "description": "minimal mern boilerplate",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start-dev": "nodemon server.js",
+    "build-dev": "cd client && webpack --watch --mode development",
+    "sass": "sass --watch client/public/scss/styles.scss:client/public/styles.css",
+    "heroku-postbuild": "cd client yarn install && yarn install && npm run build"
+  },
+  "engines": {
+    "node": "10.4.0"
+  },
+  "proxy": "http://localhost:8000",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdalpozzo/min-mern.git"
+  },
+  "author": "marlin dalpozzo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdalpozzo/min-mern/issues"
+  },
+  "homepage": "https://github.com/mdalpozzo/min-mern#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.14",
+    "path": "^0.12.7",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
